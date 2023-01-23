@@ -1,9 +1,10 @@
-class CreateProducts < ActiveRecord::Migration
+class CreateProducts < ActiveRecord::Migration[4.2]
   def change
     create_table :products do |t|
-      t.string :products
+
+      t.string :name
       t.integer :price
-      t.string :desc
+      t.string :description
       t.integer :inventory
 
       t.timestamps null: false
