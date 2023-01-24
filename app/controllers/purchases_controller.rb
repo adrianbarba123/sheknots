@@ -3,6 +3,7 @@ class PurchasesController < ApplicationController
   # GET: /purchases
   get "/purchases" do
     Purchase.all.to_json
+    "a couple purchases"
   end
 
   # POST: /purchases

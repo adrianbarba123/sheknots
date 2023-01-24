@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   get "/products" do
   ##  erb :"/products/index.html" REMOVING ALL ERB TAGS SINCE EVERYTHING WILL BE DISPLAYED WITH REACT
     Product.all.to_json
+    "yo this is products"
   end
 
   # POST: /products
