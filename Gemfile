@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem 'tux'
 gem 'faker'
 gem 'rerun'
+gem "rack-cors", "~> 1.1"
 
 group :test do
   gem 'rspec'
