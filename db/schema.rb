@@ -17,6 +17,9 @@ ActiveRecord::Schema.define(version: 2023_01_23_191248) do
     t.integer "price"
     t.string "description"
     t.integer "inventory"
+    t.boolean "discount"
+    t.string "front_image"
+    t.string "back_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,9 +31,15 @@ ActiveRecord::Schema.define(version: 2023_01_23_191248) do
     t.integer "final_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_purchases_on_product_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "address"
+    t.integer "phone_number"
     t.string "email"
     t.string "password"
     t.datetime "created_at", null: false

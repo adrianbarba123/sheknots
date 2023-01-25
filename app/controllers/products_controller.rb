@@ -3,8 +3,12 @@ class ProductsController < ApplicationController
   # GET: /products
   get "/products" do
   ##  erb :"/products/index.html" REMOVING ALL ERB TAGS SINCE EVERYTHING WILL BE DISPLAYED WITH REACT
-    Product.all.to_json
-    "yo this is products"
+    if params[:order]
+      Product.order_by(params[:order]).to_json(include: [:purchases])
+    else
+    Product.all.to_json(include: [:purchases])
+    
+    end
   end
 
   # POST: /products
