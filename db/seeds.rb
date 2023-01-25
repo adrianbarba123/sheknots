@@ -23,7 +23,7 @@ p12 = Product.create(name: "Little Miss Knot", price: 26, description:"38in/3ft 
 p13 = Product.create(name: "Knot-so Minimal", price: 28, description:"40 in/3.4ft long, fits 5-6in pot", inventory: 6, front_image: "https://iili.io/H09LvHb.jpg", back_image: "https://iili.io/H09LrxV.jpg", discount: true)
 p14 = Product.create(name: "Glitters Knot Gold", price: 38, description:"41in/3.5ft long, fits 6-8in pot", inventory: 3, front_image: "https://iili.io/H09Ls0F.jpg", back_image: "https://iili.io/H09Qfef.jpg", discount: true)
 p15 = Product.create(name: "Knotty Knockers", price: 26, description:"38in/2ft long", inventory: 2, front_image: "https://iili.io/H09QPI4.jpg", back_image: nil, discount: false)
-p16 = Product.create(name: "All tied up", price: 36, description:"51 in/4.3 ft. long, fits 6in pot", inventory: 7, front_image: "", back_image: "", discount: true) 
+p16 = Product.create(name: "All tied up", price: 36, description:"51 in/4.3 ft. long, fits 6in pot", inventory: 7, front_image: "https://iili.io/H09bO9n.jpg", back_image: nil, discount: true) 
 
 
 puts "Creating users..."
