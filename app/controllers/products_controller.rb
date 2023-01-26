@@ -11,6 +11,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  get"/products/:id/purchases" do
+
+  end
+
   # POST: /products
   post "/products" do
     
