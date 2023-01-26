@@ -14,6 +14,8 @@ gem 'tux'
 gem 'faker'
 gem 'rerun'
 gem "rack-cors", "~> 1.1"
+gem "rack-contrib"
+gem 'dotenv'
 
 group :test do
   gem 'rspec'

@@ -30,6 +30,7 @@ GEM
     concurrent-ruby (1.1.10)
     daemons (1.4.1)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
     eventmachine (1.2.7)
     faker (3.1.0)
       i18n (>= 1.8.11, < 2)
@@ -55,6 +56,8 @@ GEM
     public_suffix (5.0.1)
     racc (1.6.2)
     rack (2.2.6.2)
+    rack-contrib (2.3.0)
+      rack (~> 2.0)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-protection (3.0.5)
@@ -127,8 +130,10 @@ DEPENDENCIES
   activerecord (~> 5.2)
   bcrypt
   capybara
+  dotenv
   faker
   pry
+  rack-contrib
   rack-cors (~> 1.1)
   rack-test
   rake
