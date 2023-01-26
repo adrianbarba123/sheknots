@@ -16,3 +16,4 @@ run ApplicationController
 use ProductsController
 use UsersController
 use PurchasesController
+use SessionsController
