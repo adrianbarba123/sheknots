@@ -1,4 +1,4 @@
-class CreateProducts < ActiveRecord::Migration[4.2]
+class CreateProducts < ActiveRecord::Migration[5.2]
   def change
     create_table :products do |t|
 
@@ -6,6 +6,9 @@ class CreateProducts < ActiveRecord::Migration[4.2]
       t.integer :price
       t.string :description
       t.integer :inventory
+      t.boolean :discount
+      t.string :front_image
+      t.string :back_image
 
       t.timestamps null: false
     end
