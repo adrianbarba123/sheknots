@@ -1,16 +1,23 @@
 require './config/environment'
 
 class ApplicationController < Sinatra::Base
+  set :default_content_type, 'application/json'
 
   configure do
     set :public_folder, 'public'
     set :default_content_type, :json
     enable :sessions
     set :session_secret, ENV["SESSION_SECRET"]
-
+  
     # use Rack::Session::Cookie, :key => 'rack.session',
     #                             :path => '/',
     #                             :secret => ENV["SESSION_SECRET"]
+  end
+
+
+  get "/customers" do
+    customers = Customer.all
+    customers.to_json
   end
 
   get "/" do
@@ -24,6 +31,7 @@ class ApplicationController < Sinatra::Base
     else
       halt 400, {message: "No one is logged in!"}.to_json
     end
+
   end
 
 end
