@@ -1,6 +1,7 @@
 require './config/environment'
 
 class ApplicationController < Sinatra::Base
+  set :default_content_type, 'application/json'
 
   configure do
     set :public_folder, 'public'
@@ -13,6 +14,7 @@ class ApplicationController < Sinatra::Base
     #                             :secret => ENV["SESSION_SECRET"]
   end
 
+
   get "/" do
     "Welcome"
   end
@@ -24,6 +26,6 @@ class ApplicationController < Sinatra::Base
     else
       halt 400, {message: "No one is logged in!"}.to_json
     end
-  end
+
 
 end
