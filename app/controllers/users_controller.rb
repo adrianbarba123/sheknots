@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   # POST: /users
   post "/users" do
     new_user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
-    binding.pry
+    # binding.pry
     if new_user.id 
       halt 201, {user: new_user}.to_json
     else

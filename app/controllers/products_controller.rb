@@ -17,7 +17,19 @@ class ProductsController < ApplicationController
 
   # POST: /products
   post "/products" do
-    
+    product = Product.create(
+      name: params[:name],
+      price: params[:price],
+      description: params[:description],
+      quantity: params[:quantity],        #should include all params to be precise
+      front_image: params[:front_image],
+      back_image: params[:back_image]
+      )
+    if product.id
+      halt 201, {product: product}.to_json #halt 201 means something was created successfully
+    else
+      halt 400, {message: product.errors.full_messages.to_sentence}.to_json
+    end
   end
 
   # GET: /products/5
