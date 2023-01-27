@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   # GET: /users
   get "/users" do
     User.all.to_json
-    
   end
 
   # POST: /users
