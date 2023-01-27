@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
     #validations not required
     # validates :username, presence: true, length: {in: 4..25}
-    validates :email, presence: true, uniqueness: true, format: {with: /\A(?<username>[^@\s]+)@((?<domain_name>[-a-z0-9]+)\.(?<domain>[a-z]{2,}))\z/i} #this doesnt need to be memorized, can be found online (email validation regex)
+    validates :email, presence: true, uniqueness: true #this doesnt need to be memorized, can be found online (email validation regex)
     validates :password, length: {in: 6..25}
 
 
