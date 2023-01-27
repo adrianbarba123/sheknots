@@ -8,13 +8,21 @@ class ApplicationController < Sinatra::Base
     set :default_content_type, :json
     enable :sessions
     set :session_secret, ENV["SESSION_SECRET"]
-
+  
     # use Rack::Session::Cookie, :key => 'rack.session',
     #                             :path => '/',
     #                             :secret => ENV["SESSION_SECRET"]
   end
 
 
+<<<<<<< HEAD
+=======
+  get "/customers" do
+    customers = Customer.all
+    customers.to_json
+  end
+
+>>>>>>> d675b3e5 (no changes-testing)
   get "/" do
     "Welcome"
   end
