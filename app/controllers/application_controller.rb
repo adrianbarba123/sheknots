@@ -14,15 +14,6 @@ class ApplicationController < Sinatra::Base
     #                             :secret => ENV["SESSION_SECRET"]
   end
 
-
-<<<<<<< HEAD
-=======
-  get "/customers" do
-    customers = Customer.all
-    customers.to_json
-  end
-
->>>>>>> d675b3e5 (no changes-testing)
   get "/" do
     "Welcome"
   end
