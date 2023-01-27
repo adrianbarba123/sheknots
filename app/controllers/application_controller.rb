@@ -25,6 +25,7 @@ class ApplicationController < Sinatra::Base
     else
       halt 400, {message: "No one is logged in!"}.to_json
     end
+  end
 
 
 end
