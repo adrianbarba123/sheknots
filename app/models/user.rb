@@ -15,12 +15,8 @@ class User < ActiveRecord::Base
         "#{first_name} #{last_name}"
     end
 
-    def testing
-        return "Hello World!"
-    end
-
-    def purchase_product(product, quantity, final_price)
-        Purchase.create(user: self, product: product, quantity: quantity, final_price: final_price)
+    def purchase_product(product_id)
+        self.purchases.create(product_id: product_id, quantity: 1)
     end
 
     def return_product(product)

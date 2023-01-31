@@ -16,6 +16,7 @@ gem 'faker'
 
 gem "rack-cors", "~> 1.1"
 gem "rack-contrib"
+gem 'rack-protection'
 gem 'dotenv'
 
 group :test do

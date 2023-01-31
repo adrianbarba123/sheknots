@@ -135,6 +135,7 @@ DEPENDENCIES
   pry
   rack-contrib
   rack-cors (~> 1.1)
+  rack-protection
   rack-test
   rake
   require_all

@@ -2,7 +2,6 @@ class ProductsController < ApplicationController
 
   # GET: /products
   get "/products" do
-  ##  erb :"/products/index.html" REMOVING ALL ERB TAGS SINCE EVERYTHING WILL BE DISPLAYED WITH REACT
     if params[:order]
       Product.order_by(params[:order]).to_json(include: [:purchases])
     else
@@ -17,11 +16,12 @@ class ProductsController < ApplicationController
 
   # POST: /products
   post "/products" do
+
     product = Product.create(
       name: params[:name],
       price: params[:price],
       description: params[:description],
-      quantity: params[:quantity],        #should include all params to be precise
+      inventory: params[:inventory],        #should include all params to be precise
       front_image: params[:front_image],
       back_image: params[:back_image]
       )
